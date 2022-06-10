@@ -1,0 +1,15 @@
+.tabs{
+  display: flex;
+  gap:14px;
+  padding:10px;
+  background-color:rgba(white, 0.25); 
+  backdrop-filter: blur(3px);
+  border-radius:12px;
+}
+.tab-tile{
+  display:flex;
+  padding:8px;
+  background-color: rgba(black,0.1);
+  border-radius: 30%;
+  cursor: pointer;
+}

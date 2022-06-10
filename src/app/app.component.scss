@@ -2,19 +2,27 @@
   display:flex;
   flex-direction:column;
   height:100%;
-  background-color: #e1e2ed;
+  background-image: url('https://images.unsplash.com/photo-1652178274012-5f05ce9cbdb8?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=1080&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY1NDkwMDg5NA&ixlib=rb-1.2.1&q=80&w=1920');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 .top-section{
-  background-color: aquamarine;
-  text-align: center;
+/*   background-color: aquamarine;
+ */  text-align: center;
   padding: 100px 0px;
 }
 .content-section{
-  background-color:rgb(56, 56, 238);
-  flex-grow: 1;
+/*   background-color:rgb(56, 56, 238);
+ */  flex-grow: 1;
 }
 .bottom-section{
-  background-color:coral;
+/*   background-color:coral;
+ */  display:flex;
+  app-tabs{
+    margin:auto;
+  }
 }
 
 h1{
