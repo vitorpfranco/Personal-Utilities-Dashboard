@@ -1,0 +1,12 @@
+.booksmark-wrapper{
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.bookmark-tiles-container{
+  display: flex;
+  gap:15px;
+  justify-content:center;
+  align-items:center;
+  flex-wrap: wrap;
+}
