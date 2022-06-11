@@ -2,33 +2,13 @@
   height: 100%;
   overflow-y: auto;
 }
-.note-card{
-  background-color: rgba(black,0.6);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap:5px;
-  margin-bottom: 10px;
-  padding:15px;
-  border-radius:10px;
-  cursor: pointer;
-  transition: all 0.3s;
-  .note-title{
-    color:rgba(white,0.95);
-    font-size:20px;
-  }
-  .note-msg{
-    color:rgba(white,0.75);
-  }
-  &:hover{
-    background-color: rgba(black,0.8);
-    backdrop-filter: blur(3px);
-
-  }
-}
 
 .add-btn i {
   margin-right: 5px;
   margin-left: -6px;
 
+}
+app-note-card{
+  display:block;
+  margin-bottom: 15px;
 }
