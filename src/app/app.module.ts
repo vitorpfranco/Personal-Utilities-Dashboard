@@ -16,7 +16,7 @@ import { BookmarkTileComponent } from './bookmark-tile/bookmark-tile.component';
     BookmarksComponent,
     TodosComponent,
     NotesComponent,
-    BookmarkTileComponent
+    BookmarkTileComponent,
   ],
   imports: [
     BrowserModule,
