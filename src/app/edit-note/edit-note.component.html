@@ -1,18 +1,16 @@
-<div class="add-note-wrapper has-blurred-white-bg container ">
-  <h2 class="is-bold">Nova nota</h2>
+<div class="edit-note-wrapper has-blurred-white-bg container ">
+  <h2 class="is-bold">Editar</h2>
 
-  <form #form="ngForm" (ngSubmit)="onFormSubmit(form)">
+  <form #form="ngForm">
     <div class="textanderror">
       <input type="text" ngModel #titleField="ngModel" name="title" class="text-box"
         placeholder="Digite o título da nota." required>
-      <div *ngIf="submittry">
-        <p *ngIf="titleField.invalid">Titulo obrigatório!</p>
-      </div>
+      <p *ngIf="titleField.invalid">Titulo obrigatório!</p>
     </div>
     <textarea class="textarea" ngModel name="content" placeholder="Digite a mensagem da nota."></textarea>
     <div class="btn-container ">
       <a routerLink="../" class="btn">Cancelar</a>
-      <button class="btn align-end">Criar Nota</button>
+      <button class="btn align-end">Salvar</button>
     </div>
   </form>
 </div>

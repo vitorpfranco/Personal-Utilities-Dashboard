@@ -1,4 +1,5 @@
 <div class="note-card">
   <div class="note-title">{{note.title}}</div>
-  <div class="note-msg">{{note.content}}</div>
+  <div class="note-msg" *ngIf="note.content">{{note.content}}</div>
+  <a [routerLink]="[noteId]">add</a>
 </div>

@@ -9,6 +9,8 @@ import { Note } from '../shared/note.model';
 export class NoteCardComponent implements OnInit {
 @Input()
   note!:Note;
+@Input()  
+noteId!:string;
   constructor() { }
 
   ngOnInit(): void {

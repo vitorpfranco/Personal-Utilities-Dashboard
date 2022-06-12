@@ -79,10 +79,12 @@ h1.is-bold,h2.is-bold{
   &:hover{
     border-color:rgba(black,0.6);
   }
-  margin-bottom: 20px;
 
 }
 .textarea{
   resize:vertical;
   min-height:150px;
+}
+a{
+  text-decoration: none;
 }
