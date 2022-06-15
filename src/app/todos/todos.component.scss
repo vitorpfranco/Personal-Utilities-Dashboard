@@ -2,54 +2,8 @@
   height: 100%;
   overflow-y: auto;
 }
-.todo-item{
-  display: flex;
-  align-items: center;
-  background-color:rgba(black,0.6);
-  border-radius: 25px;
-padding: 10px 20px;
-cursor: pointer;
-margin-bottom: 10px;
-}
-.todo-text{
-  color:rgba(white,0.80);
-  font-family: 'Inter', serif;
-}
-.check-box{
-  padding:4px;
-  border: 2px solid rgba(white, 0.35);
-  border-radius:50%;
-  margin-right:15px;
-  display:flex;
-  i{
-    font-size: 18px;
-    opacity: 0;
 
-  }
-}
-.todo-item:hover{
-  .todo-text{
-  color:rgba(white,1);
-}
-  .check-box{
-    border-color: transparent;
-    background-color:rgba(white, 0.35);
-  }
-}
-
-.todo-item.completed{
-  .todo-text{
-    color:rgba(white,0.75);
-    font-family: 'Inter', serif;
-  }
-  .check-box{
-    border-color: transparent;
-    background-color:rgba(9, 218, 89);
-  }
-  i{
-    opacity: 1;
-  }
-}
-.todo-text,.check-box{
-transition:0.1s
+.add-btn i {
+  margin-right: 5px;
+  margin-left: -6px;
 }

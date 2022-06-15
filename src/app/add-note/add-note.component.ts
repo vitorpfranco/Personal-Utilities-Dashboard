@@ -10,20 +10,19 @@ import { NoteService } from '../shared/note.service';
   styleUrls: ['./add-note.component.scss']
 })
 export class AddNoteComponent implements OnInit {
-
+note!:Note;
   constructor(private noteService: NoteService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  submittry:boolean = false;
+submittry:boolean = false;
 onFormSubmit(form:NgForm):void{
-  console.log(form)
 if(form.invalid){
   this.submittry=true
   return}
-const note = new Note(form.value.title, form.value.content);
-this.noteService.addNote(note)
+this.note = new Note(form.value.title, form.value.content);
+this.noteService.addNote(this.note)
 this.submittry=false
 this.router.navigateByUrl("/notes")}
 }

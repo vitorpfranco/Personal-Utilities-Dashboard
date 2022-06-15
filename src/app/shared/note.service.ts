@@ -12,7 +12,7 @@ getNotes(){
   return this.notes
 }
 
-getNote(id:String){
+getNote(id:String):any {
   return this.notes.find(n=>n.id===id);
 }
 
@@ -24,7 +24,8 @@ updateNote(id:string, updatedFields:Partial<Note>){
 const note:any = this.getNote(id);
 Object.assign(note, updatedFields)
 }
+
 deleteNote(id:string){
-  return this.notes.filter(x => x.id !== id)
+  this.notes= this.notes.filter(x => x.id !== id)
 }
 }

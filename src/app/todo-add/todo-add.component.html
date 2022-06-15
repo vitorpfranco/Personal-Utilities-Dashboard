@@ -1,0 +1,18 @@
+<div class="add-todo-wrapper has-blurred-white-bg container ">
+  <h2 class="is-bold">Adicionar Tarefa</h2>
+  <form #form="ngForm" (ngSubmit)="onFormSubmit(form)">
+    <div class="textanderror">
+      <input type="text" ngModel #textField="ngModel" name="text" class="text-box" placeholder="Digite a tarefa."
+        required>
+      <div *ngIf="submittry">
+        <p *ngIf="textField.invalid">Adicione um texto a sua tarefa.</p>
+      </div>
+    </div>
+    <div class="btn-container ">
+      <a routerLink="../" class="btn">Cancelar</a>
+      <button class="btn align-end">Criar Tarefa</button>
+    </div>
+  </form>
+</div>
+<!-- 
+" -->
