@@ -16,6 +16,9 @@ import { TodoItemComponent } from './todo-item/todo-item.component';
 import { TodoAddComponent } from './todo-add/todo-add.component';
 import { TodoEditComponent } from './todo-edit/todo-edit.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BookmarkAddComponent } from './bookmark-add/bookmark-add.component';
+import { BookmarkEditComponent } from './bookmark-edit/bookmark-edit.component';
+import { BookmarkManageComponent } from './bookmark-manage/bookmark-manage.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +34,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     TodoItemComponent,
     TodoAddComponent,
     TodoEditComponent,
+    BookmarkAddComponent,
+    BookmarkEditComponent,
+    BookmarkManageComponent,
   ],
   imports: [
     BrowserModule,

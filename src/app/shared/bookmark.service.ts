@@ -5,7 +5,8 @@ import {Bookmark } from '../shared/bookmark.model'
   providedIn: 'root'
 })
 export class BookmarkService {
-bookmarks!:Bookmark[]
+bookmarks:Bookmark[]=[new Bookmark('Wikipedia',"http://wikipedia.com"),new Bookmark('Google',"http://google.com"
+),new Bookmark('Youtube',"http://youtube.com")];
   constructor() { }
 
 getBookmarks():Bookmark[] {

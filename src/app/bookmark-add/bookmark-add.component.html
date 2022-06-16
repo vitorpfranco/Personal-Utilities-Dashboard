@@ -1,0 +1,19 @@
+<div class="add-bookmark-wrapper has-blurred-white-bg container ">
+  <h2 class="is-bold">Adicionar Atalho de Página</h2>
+  <form #form="ngForm" ngNativeValidate (ngSubmit)="onFormSubmit(form)">
+    <div class="textanderror">
+      <label class="form-label">Título:</label>
+      <input type="text" ngModel #titleField="ngModel" name="title" class="text-box"
+        placeholder="Digite o titulo do atalho.">
+    </div>
+    <div class="textanderror">
+      <label class="form-label">URL:</label>
+      <input type="url" ngModel #urlField="ngModel" name="url" class="text-box" placeholder="Ex: http://example.com">
+    </div>
+
+    <div class="btn-container ">
+      <a routerLink="../" class="btn">Cancelar</a>
+      <button class="btn align-end">Criar Atalho</button>
+    </div>
+  </form>
+</div>

@@ -9,18 +9,16 @@
   background-attachment: fixed;
 }
 .top-section{
-/*   background-color: aquamarine;
- */  text-align: center;
+ text-align: center;
   padding: 100px 0px;
 }
 .content-section{
-/*   background-color:rgb(56, 56, 238);
- */  flex-grow: 1;
+  flex-grow: 1;
  min-height: 0;
 }
 .bottom-section{
-/*   background-color:coral;
- */  display:flex;
+  margin-top: 35px;
+  display:flex;
   app-tabs{
     margin:auto;
   }
