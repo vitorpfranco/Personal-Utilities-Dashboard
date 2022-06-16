@@ -1,0 +1,18 @@
+<div class="edit-todo-wrapper has-blurred-white-bg container ">
+  <h2 class="is-bold">Editar</h2>
+  <div *ngIf="!todo" class="error-todo">
+    <p>Não foi Possivel encontrar a tarefa.</p>
+    <a routerLink="../" class="btn">Voltar</a>
+  </div>
+  <form #form="ngForm" (ngSubmit)="onFormSubmit(form)" *ngIf=" todo">
+    <div class="textanderror">
+      <input type="text" [ngModel]="todo.content" #contentField="ngModel" name="title" class="text-box"
+        placeholder="Digite a tarefa" required>
+      <p *ngIf="contentField.invalid">Campo obrigatório!</p>
+    </div>
+    <div class="btn-container ">
+      <a routerLink="../" class="btn">Cancelar</a>
+      <button class="btn align-end">Salvar</button>
+    </div>
+  </form>
+</div>

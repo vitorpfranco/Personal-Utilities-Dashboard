@@ -3,11 +3,12 @@
     <i class="material-symbols-outlined">check</i>
   </div>
   <p class="todo-text">{{todo.content}}</p>
-  <div class="todo-item-actions">
-    <div class="btn todo-item-actions-btn">
+
+  <div class="todo-item-actions" (click)="$event.stopPropagation();">
+    <div (click)="onEditClick()" class="btn todo-item-actions-btn">
       <i class="material-symbols-outlined">Edit</i>
     </div>
-    <div class="btn todo-item-actions-btn">
+    <div (click)="onDeleteClick()" class="btn todo-item-actions-btn">
       <i class="material-symbols-outlined">Delete</i>
     </div>
   </div>

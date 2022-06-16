@@ -25,7 +25,9 @@ todos:Todo[]=[];
   }
   
   deleteTodo(id:string){
-    this.todos= this.todos.filter(x => x.id !== id)
+    const index = this.todos.findIndex(todo=> todo.id ==id)
+    if(index==-1)return
+    this.todos.splice(index,1)
   }
 }
 
