@@ -15,6 +15,7 @@ import { EditNoteComponent } from './edit-note/edit-note.component';
 import { TodoItemComponent } from './todo-item/todo-item.component';
 import { TodoAddComponent } from './todo-add/todo-add.component';
 import { TodoEditComponent } from './todo-edit/todo-edit.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { TodoEditComponent } from './todo-edit/todo-edit.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
