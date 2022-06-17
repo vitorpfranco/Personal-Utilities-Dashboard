@@ -26,12 +26,31 @@ flex-grow: 1;
 .sidebar-items{
 display:flex;
 flex-direction: column;
-align-items: center;
-justify-content: center;
+
 .sidebar-item{
+  position:relative;
   color:rgba(white,0.75);
   padding:5px 25px;
   &:hover {
     color:rgba(white,0.9);}
+  &.selected { 
+    color:rgba(white,0.95);}
 }
+}
+
+.sidebar-item::before{
+content: "";
+position: absolute;
+top: 0;
+left:0;
+height:100%;
+width:4px;
+background-color:white;
+opacity: 0;
+transition: 0.3s;
+transform: scaleY(0)
+}
+.sidebar-item.selected::before{
+opacity: 1;
+transform: scaleY(1)
 }

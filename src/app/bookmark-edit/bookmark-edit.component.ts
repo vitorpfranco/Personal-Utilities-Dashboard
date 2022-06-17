@@ -20,9 +20,14 @@ export class BookmarkEditComponent implements OnInit {
       this.bookmark =this.bookmarkService.getBookmark(idParam)
     })
   }
-  onFormSubmit(form:NgForm):void{
+  delete(){
+    this.bookmarkService.deleteBookmark(this.bookmark.id)
+    this.router.navigateByUrl("/bookmarks/manage");
 
-    this.bookmarkService.updateBookmark(this.bookmark.id,form.value);
+  }
+  onFormSubmit(form:NgForm):void{
+    const {name, url}= form.value
+    this.bookmarkService.updateBookmark(this.bookmark.id,{name,url: new URL(url)});
     this.router.navigateByUrl("/bookmarks");
   }
 }

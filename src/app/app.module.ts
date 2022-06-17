@@ -19,6 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BookmarkAddComponent } from './bookmark-add/bookmark-add.component';
 import { BookmarkEditComponent } from './bookmark-edit/bookmark-edit.component';
 import { BookmarkManageComponent } from './bookmark-manage/bookmark-manage.component';
+import { NotificationComponent } from './notification/notification.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { BookmarkManageComponent } from './bookmark-manage/bookmark-manage.compo
     BookmarkAddComponent,
     BookmarkEditComponent,
     BookmarkManageComponent,
+    NotificationComponent,
   ],
   imports: [
     BrowserModule,
