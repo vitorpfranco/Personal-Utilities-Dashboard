@@ -1,4 +1,10 @@
 <div class="app-wrapper">
+  <img [src]="bg" class="bg-img" (load)="onLoadBG()">
+  <div (click)="changeBG()" *ngIf="!loadingBG" class="btn change-bg" @bgbtnAnim>
+    <i class="material-symbols-outlined">
+      refresh
+    </i>
+  </div>
   <div class="top-section">
     <h1>19:00</h1>
     <h2>7 de junho de 2022</h2>

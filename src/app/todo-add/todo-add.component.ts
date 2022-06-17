@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { NotificationService } from '../shared/notification.service';
 import { Todo } from '../shared/todo.model';
 import { TodoService } from '../shared/todo.service';
 
@@ -11,7 +12,7 @@ import { TodoService } from '../shared/todo.service';
 })
 export class TodoAddComponent implements OnInit {
   todo!:Todo;
-  constructor(private todoService: TodoService, private router: Router) { }
+  constructor(private todoService: TodoService, private router: Router, private NotificationService: NotificationService) { }
 
   ngOnInit(): void {
   }
@@ -24,5 +25,8 @@ if(form.invalid){
 this.todo = new Todo(form.value.text);
 this.todoService.addTodo(this.todo)
 this.submittry=false
-this.router.navigateByUrl("/todos")}
+this.router.navigateByUrl("/todos")
+this.NotificationService.show("Tarefa adicionada!")
+}
+
 }

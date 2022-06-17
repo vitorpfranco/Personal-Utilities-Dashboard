@@ -5,7 +5,7 @@
     <form #form="ngForm" ngNativeValidate (ngSubmit)="onFormSubmit(form)">
       <div class="textanderror">
         <label class="form-label">Título:</label>
-        <input type="text" [ngModel]="bookmark.name" #titleField="ngModel" name="title" class="text-box"
+        <input type="text" [ngModel]="bookmark.name" #nameField="ngModel" name="name" class="text-box"
           placeholder="Digite o titulo do atalho.">
       </div>
       <div class="textanderror">
@@ -15,7 +15,7 @@
       </div>
 
       <div class="btn-container ">
-        <a routerLink="../../" class="btn">Cancelar</a>
+        <a routerLink="../../" class="btn">Fechar</a>
         <button type="button" (click)="delete()" class="btn ">Deletar</button>
         <button class="btn align-end">Salvar</button>
       </div>

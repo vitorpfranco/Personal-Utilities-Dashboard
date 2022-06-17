@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Note } from '../shared/note.model';
 import { NoteService } from '../shared/note.service';
+import { NotificationService } from '../shared/notification.service';
 
 @Component({
   selector: 'app-add-note',
@@ -11,7 +12,7 @@ import { NoteService } from '../shared/note.service';
 })
 export class AddNoteComponent implements OnInit {
 note!:Note;
-  constructor(private noteService: NoteService, private router: Router) { }
+  constructor(private noteService: NoteService, private router: Router,private NotificationService: NotificationService) { }
 
   ngOnInit(): void {
   }
@@ -24,6 +25,8 @@ if(form.invalid){
 this.note = new Note(form.value.title, form.value.content);
 this.noteService.addNote(this.note)
 this.submittry=false
-this.router.navigateByUrl("/notes")}
+this.router.navigateByUrl("/notes")
+this.NotificationService.show("Nota adicionada!")
+}
 }
 

@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Bookmark } from '../shared/bookmark.model';
 import { BookmarkService } from '../shared/bookmark.service';
+import { NotificationService } from '../shared/notification.service';
 
 @Component({
   selector: 'app-bookmark-add',
@@ -11,7 +12,7 @@ import { BookmarkService } from '../shared/bookmark.service';
 })
 export class BookmarkAddComponent implements OnInit {
 bookmark!:Bookmark;
-  constructor(private bookmarkService: BookmarkService, private router: Router) { }
+  constructor(private bookmarkService: BookmarkService, private router: Router,private NotificationService: NotificationService) { }
 
   ngOnInit(): void {
   }
@@ -24,5 +25,8 @@ if(form.invalid){
 this.bookmark = new Bookmark(form.value.title, form.value.url);
 this.bookmarkService.addBookmark(this.bookmark)
 this.submittry=false
-this.router.navigateByUrl("/bookmarks")}
+this.router.navigateByUrl("/bookmarks")
+this.NotificationService.show("Atalho adicionado!")
+}
+
 }

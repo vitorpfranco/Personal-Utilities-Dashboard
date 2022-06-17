@@ -13,7 +13,7 @@ titleIconSrc!:string;
   constructor() { }
 
   ngOnInit(): void {
-    this.titleIconSrc= this.bookmark.url + '/favicon.ico'
+    this.titleIconSrc= this.bookmark.url + 'favicon.ico'
   }
 
 }
