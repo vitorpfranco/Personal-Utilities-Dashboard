@@ -13,7 +13,8 @@ titleIconSrc!:string;
   constructor() { }
 
   ngOnInit(): void {
-    this.titleIconSrc= this.bookmark.url + 'favicon.ico'
+    this.titleIconSrc= 'https://www.google.com/s2/favicons?sz=64&domain_url='+ this.bookmark.url
+    console.log(this.titleIconSrc)
   }
 
 }
